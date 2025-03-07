@@ -2,12 +2,21 @@
   "name": "prisma-typed-sql-file-name",
   "private": true,
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "build:esbuild": "node --experimental-strip-types esbuild.ts",
+    "build:wrangler": "wrangler deploy --outdir dist/workers --dry-run"
+  },
   "devDependencies": {
-    "prisma": "^6.4.1"
+    "esbuild": "^0.25.0",
+    "prisma": "^6.4.1",
+    "wrangler": "^3.114.0"
   },
   "dependencies": {
-    "@prisma/client": "6.4.1"
+    "@prisma/adapter-pg-worker": "^6.4.1",
+    "@prisma/client": "6.4.1",
+    "@prisma/pg-worker": "^6.4.1",
+    "prisma-client-with-driverAdapters": "link:prisma-client-with-driverAdapters",
+    "prisma-client-without-driverAdapters": "link:prisma-client-without-driverAdapters"
   },
   "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
 }

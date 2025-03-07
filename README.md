@@ -64,3 +64,18 @@ $ pnpm build:wrangler
 🪵  Logs were written to "/home/miyaji255/.config/.wrangler/logs/wrangler-2025-03-07_12-56-07_855.log"
  ELIFECYCLE  Command failed with exit code 1.
 ```
+
+```
+$ build:rollup
+
+
+main.w.ts, main.wo.ts → dist/rollup...
+[!] (plugin rpt2) RollupError: [plugin rpt2] prisma-client-with-driverAdapters/sql/index.wasm.mjs: Could not resolve "./getUsers.wasm.mjs" from "prisma-client-with-driverAdapters/sql/index.wasm.mjs"
+prisma-client-with-driverAdapters/sql/index.wasm.mjs
+
+    at getRollupError (/home/miyaji255/workspace/prisma-typed-sql-file-name/node_modules/.pnpm/rollup@4.34.9/node_modules/rollup/dist/shared/parseAst.js:285:41)
+    at Object.error (/home/miyaji255/workspace/prisma-typed-sql-file-name/node_modules/.pnpm/rollup@4.34.9/node_modules/rollup/dist/shared/parseAst.js:281:42)
+    at ModuleLoader.handleInvalidResolvedId (/home/miyaji255/workspace/prisma-typed-sql-file-name/node_modules/.pnpm/rollup@4.34.9/node_modules/rollup/dist/shared/rollup.js:22198:36)
+    at /home/miyaji255/workspace/prisma-typed-sql-file-name/node_modules/.pnpm/rollup@4.34.9/node_modules/rollup/dist/shared/rollup.js:22158:26
+
+```

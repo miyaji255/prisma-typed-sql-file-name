@@ -4,11 +4,15 @@
   "type": "module",
   "scripts": {
     "build:esbuild": "node --experimental-strip-types esbuild.ts",
-    "build:wrangler": "wrangler deploy --outdir dist/workers --dry-run"
+    "build:wrangler": "wrangler deploy --outdir dist/workers --dry-run",
+    "build:rollup": "rollup -c"
   },
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.0",
     "esbuild": "^0.25.0",
     "prisma": "^6.4.1",
+    "rollup": "^4.34.9",
+    "rollup-plugin-typescript2": "^0.36.0",
     "wrangler": "^3.114.0"
   },
   "dependencies": {
